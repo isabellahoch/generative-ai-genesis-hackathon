@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+from huggingface_hub
 from diffusers import StableDiffusionPipeline
 import torch
 
