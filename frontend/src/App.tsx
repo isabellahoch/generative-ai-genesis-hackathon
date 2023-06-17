@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './App.css';
 
-import { TextInput, ImageDisplay, SubmitButton, ActionSpinner } from './components'
+import { TextInput, ImageDisplay, SubmitButton, ActionSpinner, PaintbrushSpinner } from './components'
 
 const App: React.FC = () => {
   const [inputText, setInputText] = useState('');
@@ -27,11 +28,13 @@ const App: React.FC = () => {
   };
 
   return (
-    <div>
-      <h1>Image Search</h1>
-      <TextInput onInputChange={handleInputChange} />
-      <SubmitButton onSubmit={handleSubmit} />
-      {(didSubmit && !image) && <ActionSpinner/>}
+    <div className="mainWrapper">
+      <h1>AI Impressionist</h1>
+      {!didSubmit && <div>
+        <TextInput onInputChange={handleInputChange} />
+        <SubmitButton onSubmit={handleSubmit} />
+      </div>}
+      {(didSubmit && !image) && <PaintbrushSpinner/>}
       {image && <ImageDisplay base64image={image} />}
     </div>
   );
