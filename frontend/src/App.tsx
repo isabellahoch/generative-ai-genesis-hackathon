@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css';
 import './styles/fonts.css';
 
-import { TextInput, ImageDisplay, SubmitButton, RestartButton, PaintbrushLoader } from './components'
+import { TextInput, ImageDisplay, SubmitButton, RestartButton, PaintbrushLoader, ShareMenu } from './components'
 
 const App: React.FC = () => {
   const [inputText, setInputText] = useState('');
@@ -38,14 +38,20 @@ const App: React.FC = () => {
   return (
     <div id="mainWrapper">
       <h1>AI Impressionist</h1>
-      {didJustLoad && <p>Type in a prompt to generate an impressionist painting</p>}
+      {didJustLoad && <p>Type in a prompt to generate an impressionist painting!</p>}
       {!didSubmit && <div>
         <TextInput onInputChange={handleInputChange} />
         <SubmitButton onSubmit={handleSubmit} />
       </div>}
       {(didSubmit && !image) && <PaintbrushLoader/>}
-      {image && <ImageDisplay base64image={image} />}
-      {(didSubmit && image) && <RestartButton onRestart={reset}/>}
+      {(didSubmit && image) && 
+      <>
+        <ImageDisplay base64image={image} />
+        <ShareMenu base64image={image} />
+        <RestartButton onRestart={reset}/>
+      </>
+      }
+      <p>&copy; 2023 Isabella Hochschild</p>
     </div>
   );
 };

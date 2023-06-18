@@ -1,0 +1,15 @@
+#resultImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+    background-image: url("../assets/painting_frame.png");
+    background-size: cover; 
+    padding: 35px;
+    aspect-ratio: 1;
+    margin: 15px 0px 15px 0px;
+}
+
+#resultImg {
+    max-width: 70vw;
+}
