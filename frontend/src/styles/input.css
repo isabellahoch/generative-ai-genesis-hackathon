@@ -1,0 +1,9 @@
+.textInput {
+    border-radius: 10px;
+    box-shadow: aliceblue;
+    padding: 3px 10px;
+}
+
+.textInput:focus-visible {
+    border-color: blue;
+}

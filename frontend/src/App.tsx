@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css';
+import './styles/fonts.css';
 
-import { TextInput, ImageDisplay, SubmitButton, ActionSpinner, PaintbrushSpinner } from './components'
+import { TextInput, ImageDisplay, SubmitButton, RestartButton, PaintbrushLoader } from './components'
 
 const App: React.FC = () => {
   const [inputText, setInputText] = useState('');
   const [image, setImage] = useState('');
   const [didSubmit, setDidSubmit] = useState(false);
+  const [didJustLoad, setDidJustLoad] = useState(true);
 
 
   const handleInputChange = (value: string) => {
@@ -17,6 +19,7 @@ const App: React.FC = () => {
   const handleSubmit = async () => {
     try {
       setDidSubmit(true);
+      if(didJustLoad) {setDidJustLoad(false)};
       console.log(`${process.env.REACT_APP_API_URL}/?q=${inputText}`);
       const response = await axios.get<string>(
         `${process.env.REACT_APP_API_URL}/?q=${inputText}`
@@ -27,15 +30,22 @@ const App: React.FC = () => {
     }
   };
 
+  const reset = () => {
+    setDidSubmit(false);
+    setImage('');
+  }
+
   return (
-    <div className="mainWrapper">
+    <div id="mainWrapper">
       <h1>AI Impressionist</h1>
+      {didJustLoad && <p>Type in a prompt to generate an impressionist painting</p>}
       {!didSubmit && <div>
         <TextInput onInputChange={handleInputChange} />
         <SubmitButton onSubmit={handleSubmit} />
       </div>}
-      {(didSubmit && !image) && <PaintbrushSpinner/>}
+      {(didSubmit && !image) && <PaintbrushLoader/>}
       {image && <ImageDisplay base64image={image} />}
+      {(didSubmit && image) && <RestartButton onRestart={reset}/>}
     </div>
   );
 };

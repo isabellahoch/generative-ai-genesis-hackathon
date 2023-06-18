@@ -1,3 +1,6 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap'); */
+
+
 .App {
   text-align: center;
 }
@@ -37,9 +40,11 @@
   }
 }
 
-.mainWrapper {
+#mainWrapper {
   align-items: center;
+  text-align: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
+  /* font-family: 'Montserrat', sans-serif !important; */
 }

@@ -1,0 +1,13 @@
+.styledButton {
+    background-color: blue;
+    color:  white;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: aliceblue;
+    border: none;
+    padding: 3px 10px;
+}
+
+#submitButton {
+    margin-left: 10px;
+}

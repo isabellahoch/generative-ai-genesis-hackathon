@@ -1,0 +1,10 @@
+#paintbrushLoader {
+    align-items: center;
+    justify-content: center;
+    max-width: 80vw;
+    display: flex;
+}
+
+#loadingGif {
+    width: 100%;
+}
