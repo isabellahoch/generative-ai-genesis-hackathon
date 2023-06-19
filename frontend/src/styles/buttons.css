@@ -1,11 +1,15 @@
 .styledButton {
-    background-color: blue;
-    color:  white;
+    background-color: #A3E0FF;
+    /* color:  darkgray; */
     font-weight: bold;
     border-radius: 10px;
     box-shadow: aliceblue;
     border: none;
     padding: 5px 10px;
+}
+
+.styledButton:hover {
+    cursor: pointer;
 }
 
 #submitButton {

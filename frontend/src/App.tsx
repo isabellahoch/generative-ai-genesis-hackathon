@@ -43,12 +43,12 @@ const App: React.FC = () => {
         <TextInput onInputChange={handleInputChange} />
         <SubmitButton onSubmit={handleSubmit} />
       </div>}
+      {(didSubmit && image) && <RestartButton onRestart={reset}/>}
       {(didSubmit && !image) && <PaintbrushLoader/>}
       {(didSubmit && image) && 
       <>
         <ImageDisplay base64image={image} />
         <ShareMenu base64image={image} />
-        <RestartButton onRestart={reset}/>
       </>
       }
       <p>&copy; 2023 Isabella Hochschild</p>
