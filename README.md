@@ -1,11 +1,15 @@
 # ImpressionAI
 
-ImpressionAI is a full-stack text-to-image generative AI application that allows users to generate custom impressionist paintings in seconds. This project is my submission to the AI Genesis Hackathon under the _Visual Art Using Generative AI_ category. The goal of this project is to develop an AI algorithm that accurately interprets and translate human instructions into complex impressionist visual art.
+ImpressionAI is a full-stack text-to-image generative AI application that allows users to generate custom impressionist paintings in seconds. This project is my submission to the AI Genesis Hackathon under the _Visual Art Using Generative AI_ category. I am majoring in Computer Science at Dartmouth with a minor in Art History and I studied abroad in Paris, France last term, so as I was brainstorming interesting use cases of generative AI I thought to my many trips to the Musée d'Orsay, L'Orangerie, and even an excursion to Giverny where I was able to see incredible paintings from great artists in the Impressionist movement. After all, text-to-image generative AI and the impressionists have a lot in common: both constitute simply an impression of an idea or prompt and convey it in a way that is recognizable to the viewer yet not hyperrealistic. In addition, both mediums were originally looked down upon by society (think of the famous Salon des Refusés) before earning their rightful place in museums and the realm of high art. I was quite proud of the resulting AI algorithm that accurately interprets and translate human instructions into complex and unique impressionist visual art.
+
+## Demo
+
+You can try the live demo here: [https://ai-impressionism.onrender.com/](https://ai-impressionism.onrender.com/) 🧑‍🎨
 
 ## Features
 
 - Generate custom impressionist paintings based on user-provided text instructions.
-- Randomly select a famous impressionist artist whose
+- Randomly select a famous impressionist artist to emulate style
 - Render the generated painting result and provide sharing options.
 
 ## Repository Structure
@@ -54,7 +58,7 @@ Note: Make sure you have Python, Node.js, and npm installed on your system.
 
 ## Hackathon Submission
 
-ImpressionAI is my submission to the AI Genesis Hackathon under the Visual art using generative AI category. It addresses the problem statement by developing AI algorithms that accurately interpret and translate human instructions into complex visual art. The application allows users to generate custom impressionist paintings based on their text instructions and provides a user-friendly interface to interact with the AI system.
+ImpressionAI is my submission to the AI Genesis Hackathon under the Visual Art using Generative AI category. It addresses the problem statement by developing a customized AI algorithm that accurately interprets and translates human instructions into complex visual art. The application allows users to generate custom impressionist paintings based on their text instructions and provides a user-friendly interface to interact with the AI system.
 
 ## License
 
@@ -62,12 +66,11 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
-- The AI Genesis Hackathon organizers for providing the platform to showcase and explore the potential of
-
- AI in the field of visual art.
+- The AI Genesis Hackathon organizers for providing the platform to showcase and explore the potential of AI in the field of visual art.
 - The Huggingface team for their Stable Diffusion model and open-source contributions.
 - The React and Flask communities for their excellent libraries and resources.
+- Render, where both the frontend and backend are hosted
 
 ## Contact
 
-For any inquiries or feedback regarding ImpressionAI, feel free to contact me at [your-email@example.com](mailto:your-email@example.com).
+For any inquiries or feedback regarding ImpressionAI, feel free to contact me at [isabellahochschild@gmail.com](isabellahochschild@gmail.com).
