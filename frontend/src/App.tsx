@@ -37,7 +37,7 @@ const App: React.FC = () => {
 
   return (
     <div id="mainWrapper">
-      <h1>AI Impressionist</h1>
+      <h1>Impression<span id="emphasize-AI">AI</span></h1>
       {didJustLoad && <p>Type in a prompt to generate an impressionist painting!</p>}
       {!didSubmit && <div>
         <TextInput onInputChange={handleInputChange} />
