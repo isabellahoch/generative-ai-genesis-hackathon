@@ -52,3 +52,5 @@ def test():
         if(image_bytes is None): 
             return None
         return base64.b64encode(image_bytes)
+
+app.run(host='0.0.0.0')
